@@ -288,3 +288,38 @@ show_cam_on_image, unaffected by the frontend bug).
 - Report can reference specific files: "see `src/train_starnet_eurosat.py` line 42"
 - Live demo allows supervisor/grader to interact with the model directly in browser
 - No backend required for demo — pure static site, no server costs
+
+---
+
+## Addendum: Image Fix for GitHub Pages (2026-09-18)
+
+**Problem**: After initial deployment, GitHub Pages showed broken image thumbnails with error "The source image cannot be decoded". Root cause: `.gitignore` on main branch excluded `data/` and `webapp_standalone/data/`, so no images were pushed to gh-pages branch. The app.js loads images via `data/images/` + path, but that directory didn't exist on gh-pages.
+
+**Solution**: Push full dataset images (27,000 files, 143MB) to gh-pages branch.
+
+### Actions taken
+
+1. Switched to gh-pages branch
+2. Copied `webapp_standalone/data/images/` → `data/images/` (at gh-pages root)
+3. `git add data/images/` — staged 27,000 files
+4. `git commit -m "Add full EuroSAT dataset images (27,000 images, 143MB) for GitHub Pages demo"`
+5. `git push origin gh-pages` — pushed 143MB to GitHub
+6. Waited for GitHub Pages rebuild (~90 seconds)
+7. Verified all resources return HTTP 200:
+   - Main page: https://0weixiong0.github.io/CISC3024-AI-Assignment-1/
+   - Sample image: `data/images/AnnualCrop/AnnualCrop_1002.jpg`
+   - Another image: `data/images/Forest/Forest_100.jpg`
+   - Model file: `model/model.onnx`
+
+### Result
+
+- All 27,000 images now load correctly on GitHub Pages
+- Repository size: ~190MB (main: 44 files + gh-pages: 27,014 files), well under GitHub's 1GB repo limit
+- Live demo fully functional: https://0weixiong0.github.io/CISC3024-AI-Assignment-1/
+
+### Notes
+
+- gh-pages branch has no `.gitignore`, so data/ directory was added without conflict
+- Original dataset (data/EuroSAT.zip, data/EuroSAT/) remains excluded on main branch
+- Only the packaged images (webapp_standalone/data/images/) were pushed to gh-pages
+- Privacy maintained: no training artifacts, no course materials, only dataset images needed for demo
