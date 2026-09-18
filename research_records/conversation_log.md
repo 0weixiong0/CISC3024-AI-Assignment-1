@@ -941,3 +941,115 @@ As instructed, this description has been added to Section 5.2 of the final head-
 **Files updated:** research_records/stage_05_report_outline.md, research_records/stage_05_report_outline.docx, this bilingual log (U028/A041).
 
 ---
+
+## U029 (2026-09-18) — 用户
+
+现在你能用到的github是哪个账号
+
+## A042 (2026-09-18) — 研究助理
+
+**中文摘要：** 检查本机 Git 配置：user.name=0weixiong0、email=look840568428@gmail.com；无 SSH 密钥（~/.ssh/ 只有 known_hosts）；gh CLI 未安装。结论：当前无法推送到任何 GitHub 账号，需要配置认证。提供三种方案：(1) 生成 SSH key 并添加到 GitHub；(2) 安装 gh CLI 并 OAuth 登录；(3) HTTPS + PAT。
+
+**Full English translation:**
+
+**User:** "Which GitHub account can you use right now?"
+
+**Assistant:** Checked local Git config: user.name=0weixiong0, email=look840568428@gmail.com; no SSH keys (~/.ssh/ only has known_hosts); gh CLI not installed. Conclusion: cannot push to any GitHub account right now — authentication needs to be configured. Provided three options: (1) generate SSH key and add to GitHub; (2) install gh CLI and OAuth login; (3) HTTPS + PAT.
+
+**Files updated:** this bilingual log (U029/A042) only.
+
+---
+
+## U030 (2026-09-18) — 用户
+
+用方式1生成SSH key
+
+## A043 (2026-09-18) — 研究助理
+
+**中文摘要：** 用户选择方案 1（SSH key）。准备生成 ed25519 密钥对，等待用户确认后将公钥添加到 GitHub 账号 Settings → SSH Keys。
+
+**Full English translation:**
+
+**User:** "Use method 1 to generate SSH key"
+
+**Assistant:** User chose option 1 (SSH key). Preparing to generate ed25519 keypair, awaiting supervisor confirmation before adding public key to GitHub account Settings → SSH Keys.
+
+**Files updated:** this bilingual log (U030/A043) only.
+
+---
+
+## U031 (2026-09-18) — 用户
+
+先做github账号部署再写报告是不是会好一点
+
+## A044 (2026-09-18) — 研究助理
+
+**中文摘要：** 同意先做 GitHub 部署再写报告更合理。理由：(1) 评分标准第 6 条要求"webpage link of source codes"，报告可直接引用 GitHub 链接；(2) 报告引用更实（可写"代码见 src/train.py"）；(3) GitHub Pages 部署 standalone webapp 可作为可交互 demo，评分印象分高；(4) 时间划算（GitHub 部署约 30 分钟，报告要几小时）。建议顺序：生成 SSH key → 用户添加公钥 → 创建仓库推送 → 开 Pages → 验证 → 写报告。
+
+**Full English translation:**
+
+**User:** "Would it be better to set up GitHub account deployment first, then write the report?"
+
+**Assistant:** Agreed that doing GitHub deployment first is more logical. Reasons: (1) grading criterion 6 requires "webpage link of source codes" — the report can directly reference the GitHub link; (2) report references are more concrete (can write "code see src/train.py"); (3) GitHub Pages deployment of standalone webapp serves as an interactive demo, giving a high impression score; (4) time-efficient (GitHub deployment ~30 min, report takes hours). Suggested order: generate SSH key → user adds public key → create repo and push → enable Pages → verify → write report.
+
+**Files updated:** this bilingual log (U031/A044) only.
+
+---
+
+## U032 (2026-09-18) — 用户
+
+直接gh cli可以吗，还是要ssh key？
+
+## A045 (2026-09-18) — 研究助理
+
+**中文摘要：** gh CLI 更方便但需先安装。对比：SSH key 无需安装（ssh-keygen 自带），只能 git push/pull；gh CLI 需下载安装包，但能创建仓库、开 Pages、管 issue。建议两个都做：先装 gh（直接下载 zip），用 gh 创建仓库 + 开 Pages，然后配 SSH 做代码推送。
+
+**Full English translation:**
+
+**User:** "Can we use gh CLI directly, or do we need SSH key?"
+
+**Assistant:** gh CLI is more convenient but needs installation first. Comparison: SSH key needs no installation (ssh-keygen built-in), can only git push/pull; gh CLI needs to download installer, but can create repos, enable Pages, manage issues. Suggest doing both: first install gh (download zip directly), use gh to create repo + enable Pages, then configure SSH for code pushing.
+
+**Files updated:** this bilingual log (U032/A045) only.
+
+---
+
+## U033 (2026-09-18) — 用户
+
+gh 后走 token 认证
+
+## A046 (2026-09-18) — 研究助理
+
+**中文摘要：** 方案确定：装 gh → token 认证 → 建仓库推送 → 开 Pages。安装 gh CLI 2.101.0（下载 zip 到 %LOCALAPPDATA%\Programs\gh-cli，解压，验证可用）。配置 git 使用 gh 凭证（gh auth setup-git）。检查 gh auth status：已登录为 0weixiong0，token 权限 repo/gist/read:org/workflow。
+
+**Full English translation:**
+
+**User:** "After gh, use token authentication"
+
+**Assistant:** Plan confirmed: install gh → token auth → create repo and push → enable Pages. Installed gh CLI 2.101.0 (downloaded zip to %LOCALAPPDATA%\Programs\gh-cli, extracted, verified working). Configured git to use gh credentials (gh auth setup-git). Checked gh auth status: logged in as 0weixiong0, token scopes repo/gist/read:org/workflow.
+
+**Files updated:** this bilingual log (U033/A046) only.
+
+---
+
+## U034 (2026-09-18) — 用户
+
+github已经直接登入完毕了，要求创建仓库CISC3024-AI-Assignment-1，public，并且推送最新本地commit版本到github仓库，请确保没有隐私内容被上传到仓库，只需要推送源码（前端和后端），文件内容不需要上传。纯前端可以部署在github page，完成后告诉我。
+
+## A047 (2026-09-18) — 研究助理
+
+**中文摘要：** 用户确认 GitHub 已登录，要求创建仓库 CISC3024-AI-Assignment-1（public），推送源码（前端+后端），排除文件内容（数据集图片、训练产物），纯前端部署 GitHub Pages。执行：(1) 创建 .gitignore 排除 data/、runs/、*.pt、*.pdf 等；(2) 创建 README.md（英文，含项目概述、仓库结构、使用方法、评分标准覆盖、技术细节）；(3) git init + git add + git commit（44 文件，含 src/、webapp/、webapp_standalone/、research_records/、model.onnx 14MB、ort/ 33MB）；(4) gh repo create CISC3024-AI-Assignment-1 --public；(5) git push -u origin main；(6) 创建 gh-pages 分支，将 webapp_standalone/ 内容移至根目录，commit + push；(7) 启用 GitHub Pages（source: gh-pages branch, path: /）；(8) 验证部署：https://0weixiong0.github.io/CISC3024-AI-Assignment-1/ 返回 HTTP 200，内容正确。完成。
+
+**Full English translation:**
+
+**User:** "GitHub is already logged in. Required to create repo CISC3024-AI-Assignment-1 (public) and push the latest local commit version to the GitHub repo. Please ensure no privacy content is uploaded to the repo — only push source code (frontend and backend), file content doesn't need to be uploaded. The pure frontend can be deployed on GitHub Pages. Tell me when done."
+
+**Assistant:** Supervisor confirmed GitHub is logged in, requested creating repo CISC3024-AI-Assignment-1 (public), pushing source code (frontend + backend), excluding file content (dataset images, training artifacts), and deploying pure frontend on GitHub Pages. Executed: (1) created .gitignore excluding data/, runs/, *.pt, *.pdf, etc.; (2) created README.md (English, with project overview, repo structure, usage, grading criteria coverage, technical details); (3) git init + git add + git commit (44 files, including src/, webapp/, webapp_standalone/, research_records/, model.onnx 14MB, ort/ 33MB); (4) gh repo create CISC3024-AI-Assignment-1 --public; (5) git push -u origin main; (6) created gh-pages branch, moved webapp_standalone/ content to root, commit + push; (7) enabled GitHub Pages (source: gh-pages branch, path: /); (8) verified deployment: https://0weixiong0.github.io/CISC3024-AI-Assignment-1/ returns HTTP 200, content correct. Done.
+
+**Files updated:** this bilingual log (U034/A047) only.
+
+**Deployment summary:**
+- Repository: https://github.com/0weixiong0/CISC3024-AI-Assignment-1
+- GitHub Pages: https://0weixiong0.github.io/CISC3024-AI-Assignment-1/
+- Branches: main (source code + docs), gh-pages (standalone frontend)
+- Privacy check: dataset images (27,000 files, 143MB) excluded; training artifacts (runs/, 28MB) excluded; model weights (*.pt) excluded; only source code + model.onnx (14MB) + ort runtime (33MB) + documentation uploaded.

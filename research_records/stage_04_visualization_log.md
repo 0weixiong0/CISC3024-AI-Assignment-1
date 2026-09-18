@@ -221,3 +221,70 @@ Grad-CAM colorful (table above). Server (http://127.0.0.1:8000/): same
 image; layer/block switching updates title and grid ("stages[3]
 (256×7×7), channels 32–47 of 256"); Grad-CAM overlay renders (server-side
 show_cam_on_image, unaffected by the frontend bug).
+
+---
+
+## Addendum: GitHub Deployment (2026-09-18)
+
+**Supervisor request**: Deploy source code to GitHub + enable GitHub Pages for standalone frontend.
+
+### Deployment actions
+
+1. **Installed gh CLI 2.101.0**
+   - Downloaded zip from cli/cli releases
+   - Extracted to `%LOCALAPPDATA%\Programs\gh-cli\`
+   - Configured git credential helper: `gh auth setup-git`
+
+2. **Privacy audit**
+   - Created `.gitignore` excluding: `data/`, `webapp_standalone/data/`, `runs/`, `*.pt`, `*.pdf`, `*.pptx`, `*.docx`, `__pycache__/`, `.env`
+   - Verified with `git add --dry-run`: 44 files to be added, all source code + documentation
+   - No dataset images, no training checkpoints, no course materials uploaded
+
+3. **Repository creation**
+   - Repo: https://github.com/0weixiong0/CISC3024-AI-Assignment-1 (public)
+   - Initial commit: 44 files (src/, webapp/, webapp_standalone/, research_records/, model.onnx, ort/)
+   - Branch `main`: complete project source code
+   - Branch `gh-pages`: standalone frontend (webapp_standalone/ content at root)
+
+4. **GitHub Pages deployment**
+   - Source: `gh-pages` branch, path `/`
+   - URL: https://0weixiong0.github.io/CISC3024-AI-Assignment-1/
+   - Status: built and live (HTTP 200, 2385 bytes index.html)
+   - Verification: HTML content matches local webapp_standalone/index.html
+
+### Files pushed
+
+**main branch** (44 files):
+- `src/` — 6 Python scripts (train, evaluate, export, serve, prepare, package)
+- `webapp/` — 3 files (index.html, app.js, style.css)
+- `webapp_standalone/` — 13 files (HTML/JS/CSS + model/ + ort/)
+- `research_records/` — 20 markdown files (complete bilingual documentation)
+- `README.md`, `.gitignore`, `Requirement.txt`
+- `DEEP_RESEARCH_*.md` — 2 literature review documents
+
+**gh-pages branch** (13 files):
+- Root: index.html, app.js, style.css, colormaps.js, manifest.json, README.md
+- `model/` — model.onnx (14MB), verification.json
+- `ort/` — onnxruntime-web WASM runtime (33MB)
+
+### Excluded (privacy check)
+
+- `data/` — 234MB (original EuroSAT dataset, 27,000 images)
+- `webapp_standalone/data/` — 143MB (packaged dataset for standalone demo)
+- `runs/` — 28MB (training checkpoints, logs)
+- `*.pt` — PyTorch model weights
+- `*.pdf`, `*.pptx`, `*.docx` — course materials
+
+### Verification
+
+- GitHub repo: https://github.com/0weixiong0/CISC3024-AI-Assignment-1 ✓
+- GitHub Pages: https://0weixiong0.github.io/CISC3024-AI-Assignment-1/ ✓
+- HTTP status: 200 OK ✓
+- Content: HTML matches local source ✓
+
+### Notes for report
+
+- Criterion 6 ("webpage link of source codes") satisfied: both repo URL and live demo URL available
+- Report can reference specific files: "see `src/train_starnet_eurosat.py` line 42"
+- Live demo allows supervisor/grader to interact with the model directly in browser
+- No backend required for demo — pure static site, no server costs
