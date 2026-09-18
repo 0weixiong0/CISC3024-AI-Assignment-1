@@ -1,0 +1,141 @@
+{
+ "opset": 17,
+ "onnx_mb": 13.72,
+ "images": [
+  {
+   "path": "AnnualCrop/AnnualCrop_1153.jpg",
+   "pred": "AnnualCrop",
+   "ref_top3": [
+    {
+     "c": "AnnualCrop",
+     "p": 0.983
+    },
+    {
+     "c": "PermanentCrop",
+     "p": 0.0059
+    },
+    {
+     "c": "Pasture",
+     "p": 0.0047
+    }
+   ],
+   "probs_max_abs_diff": 1.6e-05,
+   "cam_corr_vs_pytorch_grad_cam": 1.0,
+   "cam_max_abs_diff": 0.2489,
+   "f0_shape": [
+    32,
+    56,
+    56
+   ],
+   "f0_max_abs_diff": 0.004201,
+   "f1_shape": [
+    64,
+    28,
+    28
+   ],
+   "f1_max_abs_diff": 0.009569,
+   "f2_shape": [
+    128,
+    14,
+    14
+   ],
+   "f2_max_abs_diff": 0.225189,
+   "f3_shape": [
+    256,
+    7,
+    7
+   ],
+   "f3_max_abs_diff": 0.020093
+  },
+  {
+   "path": "PermanentCrop/PermanentCrop_1526.jpg",
+   "pred": "PermanentCrop",
+   "ref_top3": [
+    {
+     "c": "PermanentCrop",
+     "p": 0.9998
+    },
+    {
+     "c": "HerbaceousVegetation",
+     "p": 0.0001
+    },
+    {
+     "c": "AnnualCrop",
+     "p": 0.0
+    }
+   ],
+   "probs_max_abs_diff": 0.0,
+   "cam_corr_vs_pytorch_grad_cam": 1.0,
+   "cam_max_abs_diff": 0.3053,
+   "f0_shape": [
+    32,
+    56,
+    56
+   ],
+   "f0_max_abs_diff": 0.004059,
+   "f1_shape": [
+    64,
+    28,
+    28
+   ],
+   "f1_max_abs_diff": 0.014852,
+   "f2_shape": [
+    128,
+    14,
+    14
+   ],
+   "f2_max_abs_diff": 0.103458,
+   "f3_shape": [
+    256,
+    7,
+    7
+   ],
+   "f3_max_abs_diff": 0.015695
+  },
+  {
+   "path": "River/River_2152.jpg",
+   "pred": "River",
+   "ref_top3": [
+    {
+     "c": "River",
+     "p": 0.9991
+    },
+    {
+     "c": "Highway",
+     "p": 0.0004
+    },
+    {
+     "c": "Forest",
+     "p": 0.0003
+    }
+   ],
+   "probs_max_abs_diff": 1e-06,
+   "cam_corr_vs_pytorch_grad_cam": 1.0,
+   "cam_max_abs_diff": 0.0727,
+   "f0_shape": [
+    32,
+    56,
+    56
+   ],
+   "f0_max_abs_diff": 0.005212,
+   "f1_shape": [
+    64,
+    28,
+    28
+   ],
+   "f1_max_abs_diff": 0.008521,
+   "f2_shape": [
+    128,
+    14,
+    14
+   ],
+   "f2_max_abs_diff": 0.025296,
+   "f3_shape": [
+    256,
+    7,
+    7
+   ],
+   "f3_max_abs_diff": 0.024844
+  }
+ ]
+}

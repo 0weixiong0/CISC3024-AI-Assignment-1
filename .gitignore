@@ -1,0 +1,38 @@
+# Dataset and images
+data/
+webapp_standalone/data/
+
+# Training artifacts
+runs/
+*.pt
+*.pth
+*.ckpt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+ENV/
+.env
+
+# Course materials (not source code)
+*.pdf
+*.pptx
+*.docx
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log

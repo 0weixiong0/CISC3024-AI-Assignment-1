@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StarNet-S2 on EuroSAT — Visualization</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>StarNet-S2 on EuroSAT</h1>
+  <div id="summary" class="badges"></div>
+</header>
+<main>
+  <section id="browse" class="panel">
+    <h2>Dataset browser</h2>
+    <div class="controls">
+      <label>Split
+        <select id="split">
+          <option value="test" selected>test</option>
+          <option value="val">val</option>
+          <option value="train">train</option>
+        </select>
+      </label>
+      <label>Class <select id="cls"><option value="all">all</option></select></label>
+      <span id="count" class="muted"></span>
+    </div>
+    <div id="grid" class="grid"></div>
+    <button id="more" hidden>Load more</button>
+  </section>
+  <section id="inspect" class="panel">
+    <h2>Inspect</h2>
+    <div id="placeholder" class="muted">Select an image on the left.</div>
+    <div id="detail" hidden>
+      <div class="detail-top">
+        <img id="main-img" alt="selected image">
+        <div>
+          <div class="chips">
+            <span id="gt-chip" class="chip"></span>
+            <span id="pred-chip" class="chip"></span>
+          </div>
+          <div id="path" class="muted small"></div>
+          <div id="probs"></div>
+        </div>
+      </div>
+      <div class="actions">
+        <button id="btn-cam">Grad-CAM</button>
+        <button id="btn-fm">Feature maps</button>
+      </div>
+      <div id="cam-box" class="viz" hidden>
+        <h3>Grad-CAM overlay (predicted class, target layer: final norm)</h3>
+        <img id="cam-img" alt="Grad-CAM overlay">
+      </div>
+      <div id="fm-box" class="viz" hidden>
+        <h3 id="fm-title">Intermediate feature maps</h3>
+        <div class="controls">
+          <label>Layer
+            <select id="fm-layer"></select>
+          </label>
+          <label>Channels
+            <select id="fm-ch"></select>
+          </label>
+        </div>
+        <img id="fm-img" alt="feature map grid">
+      </div>
+    </div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

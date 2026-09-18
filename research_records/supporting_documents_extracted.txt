@@ -1,0 +1,173 @@
+=== ppt/slides/slide1.xml ===
+CISC 3024
+Agent Coding 1
+=== ppt/slides/slide2.xml ===
+Contents
+Agent Coding
+Exampl
+e
+=== ppt/slides/slide3.xml ===
+Agent Coding
+=== ppt/slides/slide4.xml ===
+Coding with Agents
+(Decomposition)
+(Task) D
+escription
+Preparation (Plan)
+Execution
+Supervision
+Verification
+(Result) Presentation
+Evaluation
+Iteration
+SUBSCRIPTION
+=== ppt/slides/slide5.xml ===
+Coding with Agents
+(Decomposition)
+(Task) D
+escription
+Preparation (Plan)
+Execution
+Supervision
+Verification
+(Result) Presentation
+Evaluation
+Iteration
+=== ppt/slides/slide6.xml ===
+Coding with Agents
+(Decomposition)
+(Task) D
+escription
+Preparation (Plan)
+Execution
+Supervision
+Verification
+(Result) Presentation
+Evaluation
+Iteration
+=== ppt/slides/slide7.xml ===
+Coding with Agents
+Task Description
+The most important step (except subscription).
+Goal
+Scope
+Constraints
+Input
+Output
+Functional Requirements
+=== ppt/slides/slide8.xml ===
+Coding with Agents
+Task Description
+Should be clear and precise.
+AI might make mistakes or misunderstand your intention.
+LeNet?
+PyTorch – LeNet?
+28x28, 
+ReLU
+, max pooling, …
+1998 LeNet-5?
+32x32, scaled tanh, average pooling, …
+=== ppt/slides/slide9.xml ===
+Coding with Agents
+Task Description
+How to describe efficiently?
+Existing reference
+Web search
+Paper/documentation
+Expected outputs
+Agent understanding and human feedback
+=== ppt/slides/slide10.xml ===
+Coding with Agents
+(Decomposition)
+(Task) D
+escription
+Preparation (Plan)
+Execution
+Supervision
+Verification
+(Result) Presentation
+Evaluation
+Iteration
+=== ppt/slides/slide11.xml ===
+Coding with Agents
+Preparation (Plan)
+Self-defined or AI generated/guided.
+Implementation/technical details.
+Set milestones
+Minimum viable product (MVP)
+AI generate and human refine
+=== ppt/slides/slide12.xml ===
+Example
+=== ppt/slides/slide13.xml ===
+Demo 
+by
+ Codex
+My implementation only for reference.
+MNIST classification by LeNet.
+=== ppt/slides/slide14.xml ===
+Embrace
+Experience
+Enjoy
+=== ppt/slides/slide15.xml ===
+Thank You
+=== WORD TEMPLATE DOCUMENT TEXT ===
+University of Macau
+Faculty of Information Science and Computing
+Department of Computer Science
+
+CISCXXXX YYYYXXX Report
+by
+Your NameXXX, Student No: UDxxxxxxCYYYYYY
+ 
+18 Sep 2026
+
+Table of Contents
+First layout title3
+Second layout title3
+First layout Title3
+Second layout title3
+Second layout title3
+First layout title3
+Second layout title3
+Third layout title3
+Third layout title3
+Third layout title3
+
+
+
+First layout title
+Text.
+Second layout title
+text.
+First layout Title
+Second layout title
+text.
+Second layout title
+text.
+First layout title
+Second layout title
+Third layout title
+text.
+Third layout title
+text.
+Third layout title
+text.
+
+Table 1
+Table text
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 1
+Figure Text
+Figure here
+
