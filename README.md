@@ -37,7 +37,6 @@ This repository contains the complete implementation of AI Assignment #1 for CIS
 │   ├── ort/                      # onnxruntime-web WASM runtime
 │   └── manifest.json             # Frozen train/val/test split
 ├── research_records/             # Complete research documentation
-│   ├── conversation_log.md       # Bilingual supervisor-AI dialogue
 │   ├── stage_00_preflight.md     # Environment setup
 │   ├── stage_01_*.md             # Literature search & model selection
 │   ├── stage_02_experiment_design.md
@@ -112,7 +111,7 @@ This repository addresses all 6 grading criteria:
 2. **Algorithm description**: StarNet-S2 architecture with star operation topology
 3. **How AI implements it**: Complete pipeline — training, evaluation, ONNX export, dual deployment
 4. **Experiment settings and results**: Frozen split, AMP training, 97.65% test accuracy
-5. **What you have learnt**: Documented in `research_records/conversation_log.md`
+5. **What you have learnt**: Experiment and visualization lessons documented in `research_records/stage_03_experiment_log.md` and `research_records/stage_04_visualization_log.md`
 6. **Webpage link of source codes**: This GitHub repository + live demo
 
 ## Technical Details
@@ -152,7 +151,7 @@ This repository is for academic purposes (CISC3024 assignment). EuroSAT dataset 
 **Author**: 0weixiong0  
 **Email**: look840568428@gmail.com  
 **Course**: CISC3024 Pattern Recognition, University of Macau  
-**Supervisor**: AI-assisted research workflow (see conversation_log.md)
+**Supervisor**: AI-assisted research workflow (see `research_records/` stage summaries)
 
 ---
 

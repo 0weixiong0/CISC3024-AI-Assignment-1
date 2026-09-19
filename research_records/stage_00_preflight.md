@@ -10,7 +10,7 @@ This is an English working-stage report, not the final assessed report. Its comp
 
 ## 1. Purpose and supervision contract
 
-The supervisor commissioned an AI-led search, design, experimentation, and reporting process, with explicit human approval between stages. The assistant is responsible for generating code and reports; the supervisor provides decisions and evaluations. The original request and its full English translation are preserved in `conversation_log.md`.
+The supervisor commissioned an AI-led search, design, experimentation, and reporting process, with explicit human approval between stages. The assistant is responsible for generating code and reports; the supervisor provides decisions and evaluations.
 
 Approval gates:
 1. Approve a model from an evidence-based literature shortlist.
@@ -198,7 +198,6 @@ Every artifact created during this preflight is listed below using its full abso
 | --- | --- |
 | Project memory index | `C:\Users\weixiong\.qoder\projects\D--claude-workspace-CISC3024-AI-Assignment-1\memory\MEMORY.md` |
 | Durable supervision guidance | `C:\Users\weixiong\.qoder\projects\D--claude-workspace-CISC3024-AI-Assignment-1\memory\research-supervision.md` |
-| Original/English dialogue archive | `D:\claude\workspace\CISC3024 AI Assignment 1\research_records\conversation_log.md` |
 | Assignment PDF text evidence | `D:\claude\workspace\CISC3024 AI Assignment 1\research_records\AIassign1_extracted.txt` |
 | Presentation/template text evidence | `D:\claude\workspace\CISC3024 AI Assignment 1\research_records\supporting_documents_extracted.txt` |
 | English preflight report, editable source | `D:\claude\workspace\CISC3024 AI Assignment 1\research_records\stage_00_preflight.md` |

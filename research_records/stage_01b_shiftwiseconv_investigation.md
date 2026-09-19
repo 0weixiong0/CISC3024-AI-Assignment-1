@@ -275,4 +275,3 @@ Ma, X., Dai, X., Bai, Y., Wang, Y., & Fu, Y. (2024). Rewrite the stars. In *Proc
 | Main selection report | `D:\claude\workspace\CISC3024 AI Assignment 1\DEEP_RESEARCH_MODEL_SELECTION.md` |
 | Verification record | `D:\claude\workspace\CISC3024 AI Assignment 1\research_records\stage_01_verification.md` |
 | Screening ledger | `D:\claude\workspace\CISC3024 AI Assignment 1\research_records\stage_01_screening_ledger.csv` |
-| Conversation log | `D:\claude\workspace\CISC3024 AI Assignment 1\research_records\conversation_log.md` |

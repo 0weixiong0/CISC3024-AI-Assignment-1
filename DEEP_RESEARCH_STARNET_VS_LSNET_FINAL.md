@@ -3,7 +3,7 @@
 **Date:** 2026-09-18
 **Depth:** standard (1 retrieval subagent Wave 1 + 2 gap-fill subagents Wave 2 + 1 verification subagent Phase 3.1)
 **Status:** Research only — this report authorizes no downloads, installations, or training. All decisions remain subject to supervisor approval.
-**Companion files:** `DEEP_RESEARCH_MODEL_SELECTION.md` (overall selection history), `research_records/stage_01d_emerging_candidates.md` (Stage 01d verification), `research_records/conversation_log.md` (bilingual log).
+**Companion files:** `DEEP_RESEARCH_MODEL_SELECTION.md` (overall selection history), `research_records/stage_01d_emerging_candidates.md` (Stage 01d verification).
 
 ---
 
